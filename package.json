@@ -1,0 +1,31 @@
+{
+  "name": "prenetrega_backend3",
+  "version": "1.0.0",
+  "description": "Este proyecto es la programación del backend para la aplicación de adopción de mascotas `AdoptMe`. Fue realizado como parte del curso Programación Backend III: Testing y Escalabilidad Backend de CODERHOUSE, comisión 70070, con el profesor Omar Jesús Maniás. La aplicación original ha sido ampliada para incluir funcionalidad de generación de datos ficticios de mascotas y usuarios, facilitando el desarrollo y las pruebas de la plataforma.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "mocha test/supertest.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.1",
+    "multer": "^1.4.5-lts.1",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "chai": "^5.1.2",
+    "commitizen": "^4.3.1",
+    "mocha": "^10.8.2"
+  }
+}
