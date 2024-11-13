@@ -27,5 +27,10 @@
     "chai": "^5.1.2",
     "commitizen": "^4.3.1",
     "mocha": "^10.8.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

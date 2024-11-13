@@ -147,32 +147,32 @@ Esta es la estructura principal de los archivos de la aplicación, organizada en
 
 ## Recursos Utilizados
 
-Este proyecto hace uso de varias dependencias y herramientas clave para su desarrollo y funcionamiento. A continuación se detallan los recursos utilizados en el backend de la aplicación:
+En este proyecto se utilizaron las siguientes dependencias y herramientas:
 
 ### Dependencias
 
-- **bcrypt**: Librería para encriptación y comparación de contraseñas.
-- **cookie-parser**: Middleware para analizar cookies y facilitar la gestión de sesiones.
-- **dotenv**: Permite la carga de variables de entorno desde archivos `.env` para manejar configuraciones sensibles.
-- **express**: Framework web para Node.js que facilita la creación de APIs y el manejo de rutas.
-- **jsonwebtoken**: Librería para crear y verificar JSON Web Tokens (JWT), utilizada en la autenticación de usuarios.
-- **mongoose**: ORM para MongoDB, que permite interactuar con la base de datos de manera sencilla.
-- **multer**: Middleware para la carga de archivos en aplicaciones Node.js.
-- **supertest**: Herramienta para realizar pruebas de integración sobre endpoints HTTP.
+- **bcrypt**: Librería para el hashing de contraseñas.
+- **cookie-parser**: Middleware para el manejo de cookies en las solicitudes.
+- **dotenv**: Carga de variables de entorno desde un archivo `.env`.
+- **express**: Framework para la creación de aplicaciones web en Node.js.
+- **jsonwebtoken**: Manejo de JSON Web Tokens (JWT) para la autenticación.
+- **mongoose**: ODM (Object Data Modeling) para MongoDB y Node.js.
+- **multer**: Middleware para la carga de archivos (en este caso, imágenes).
+- **supertest**: Librería para realizar pruebas HTTP en la API.
+- **cors**: Middleware para permitir el intercambio de recursos entre diferentes orígenes (CORS).
+- **express-handlebars**: Motor de plantillas Handlebars para generar vistas dinámicas.
+- **morgan**: Middleware para el registro de peticiones HTTP.
+- **connect-mongo**: Almacenamiento de sesiones en MongoDB.
+- **passport**: Middleware para la autenticación.
+- **passport-local**: Estrategia de autenticación local para Passport.
+- **validator**: Herramienta para la validación de entradas (como emails y contraseñas).
 
 ### Dependencias de Desarrollo
 
-- **@faker-js/faker**: Utilizada para la generación de datos falsos, como nombres de mascotas y usuarios, que se almacenan en la base de datos durante el desarrollo y las pruebas.
-- **chai**: Librería de aserciones para facilitar la escritura de pruebas unitarias.
-- **mocha**: Framework de pruebas para Node.js que permite escribir pruebas asíncronas de manera sencilla.
-
-### Scripts
-
-- **start**: `node --watch src/app.js` - Inicia el servidor con supervisión de cambios, útil para desarrollo.
-- **dev**: `nodemon src/app.js` - Inicia el servidor con `nodemon`, recargando automáticamente al detectar cambios en el código fuente.
-- **test**: `mocha test/supertest.test.js` - Ejecuta las pruebas utilizando Mocha y Supertest para verificar la funcionalidad de la API.
-
-Estas dependencias y herramientas aseguran la escalabilidad, facilidad de pruebas y manejo de datos en el proyecto.
+- **@faker-js/faker**: Generación de datos falsos para pruebas y desarrollo.
+- **chai**: Librería para la aserción en las pruebas.
+- **commitizen**: Herramienta para la creación de mensajes de commit con un formato estándar.
+- **mocha**: Framework de pruebas para JavaScript.
 
 ## Pruebas de la API
 
