@@ -31,7 +31,6 @@ Este proyecto permite generar datos de prueba para la aplicación de adopción d
 
 ```bash
    git clone https://github.com/scerminati/AdoptMe1
-   cd AdoptMe1
 ```
 
 2. Instalar las dependencias:
