@@ -67,8 +67,8 @@ La API permite generar datos de prueba, como mascotas y usuarios, en cantidades 
   - **Cuerpo de la solicitud**:
     ```json
     {
-      "petQuantity": 50, // Número de mascotas a generar
-      "userQuantity": 50 // Número de usuarios a generar
+      "petQuantity": 50, 
+      "userQuantity": 50 
     }
     ```
 
