@@ -1,4 +1,4 @@
-# AdoptMe - Mock de Datos
+# AdoptMe - Proyecto Final
 
 Este proyecto es la programación del backend para la aplicación de adopción de mascotas "AdoptMe". Fue realizado como parte del curso **Programación Backend III: Testing y Escalabilidad Backend** de **CODERHOUSE**, comisión 70070, con el profesor Omar Jesús Maniás. La aplicación original ha sido ampliada para incluir funcionalidad de generación de datos ficticios de mascotas y usuarios, facilitando el desarrollo y las pruebas de la plataforma.
 
