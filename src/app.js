@@ -8,6 +8,8 @@ import adoptionsRouter from "./routes/adoption.router.js";
 import sessionsRouter from "./routes/sessions.router.js";
 import mocksRouter from "./routes/mocks.router.js";
 
+import swagger from "./utils/swagger.js";
+
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -42,7 +44,5 @@ function configureRoutes() {
   app.use("/api/sessions", sessionsRouter);
   app.use("/api/mocks", mocksRouter);
 }
-
+swagger(app);
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
-
-
