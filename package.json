@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --watch src/app.js",
+    "swagger": "node --watch src/index.js",
     "dev": "nodemon src/app.js",
     "test": "mocha test/supertest.test.js"
   },

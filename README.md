@@ -67,8 +67,8 @@ La API permite generar datos de prueba, como mascotas y usuarios, en cantidades 
   - **Cuerpo de la solicitud**:
     ```json
     {
-      "petQuantity": 50, 
-      "userQuantity": 50 
+      "petQuantity": 50,
+      "userQuantity": 50
     }
     ```
 
@@ -80,10 +80,9 @@ La API permite generar datos de prueba, como mascotas y usuarios, en cantidades 
 
 ## Funcionalidad de `utils`
 
-La carpeta `utils` contiene funciones que permiten generar datos ficticios de mascotas y usuarios. Estas funciones se apoyan en la librería `@faker-js/faker` para generar aleatoriamente atributos como nombres, especies y características de las mascotas, así como información básica de los usuarios (nombre, apellido, correo electrónico y rol). 
+La carpeta `utils` contiene funciones que permiten generar datos ficticios de mascotas y usuarios. Estas funciones se apoyan en la librería `@faker-js/faker` para generar aleatoriamente atributos como nombres, especies y características de las mascotas, así como información básica de los usuarios (nombre, apellido, correo electrónico y rol).
 
 - **`mockPets`**: Esta función genera un conjunto de datos ficticios para una mascota, eligiendo aleatoriamente una especie y generando un nombre y una fecha de nacimiento. Además, asigna una mascota como no adoptada y sin dueño.
-  
 - **`mockUsers`**: Genera datos ficticios de usuarios, como nombre, apellido, correo electrónico y un rol asignado aleatoriamente (administrador o usuario). También se incluye una contraseña predeterminada, que es cifrada para asegurar la privacidad.
 
 Ambas funciones están diseñadas para facilitar la creación de datos de prueba en la base de datos de la aplicación.
@@ -180,116 +179,132 @@ En esta sección se muestran los tests de los diferentes endpoints implementados
 ### 1. Generación de Mascotas
 
 #### Descripción:
+
 Este endpoint permite generar una cantidad específica de mascotas de prueba. Puedes utilizar este endpoint para obtener una lista de mascotas aleatorias para pruebas en el sistema.
 
 #### Endpoint:
+
 `GET api/mocks/mockingpets/:q`
 
 **Parámetro:**
+
 - `q`: Número de mascotas a generar. Por defecto, se generan 50 si el parámetro no está especificado.
 
 #### Ejemplo de Solicitud:
+
 ```bash
 GET http://localhost:8080/api/mocks/mockingpets/3
 ```
 
 #### Ejemplo de Respuesta:
+
 ```json
- [
-        {
-            "name": "Gracie",
-            "specie": "dog - Chien Français Tricolore",
-            "birthDate": "2014-10-13T02:45:55.015Z",
-            "adopted": false,
-            "owner": null
-        },
-        {
-            "name": "Maggie",
-            "specie": "snake - Perrotet's shieldtail snake",
-            "birthDate": "2014-05-31T06:36:55.853Z",
-            "adopted": false,
-            "owner": null
-        },
-        {
-            "name": "Bella",
-            "specie": "rabbit - Mini Lop",
-            "birthDate": "2011-08-15T08:44:48.389Z",
-            "adopted": false,
-            "owner": null
-        }
-    ]
+[
+  {
+    "name": "Gracie",
+    "specie": "dog - Chien Français Tricolore",
+    "birthDate": "2014-10-13T02:45:55.015Z",
+    "adopted": false,
+    "owner": null
+  },
+  {
+    "name": "Maggie",
+    "specie": "snake - Perrotet's shieldtail snake",
+    "birthDate": "2014-05-31T06:36:55.853Z",
+    "adopted": false,
+    "owner": null
+  },
+  {
+    "name": "Bella",
+    "specie": "rabbit - Mini Lop",
+    "birthDate": "2011-08-15T08:44:48.389Z",
+    "adopted": false,
+    "owner": null
+  }
+]
 ```
 
 #### Captura de Test:
-![Primer Test](image.png)
+
+![Primer Test](src/public/readme/image.png)
 
 ---
 
 ### 2. Generación de Usuarios
 
 #### Descripción:
+
 Este endpoint permite generar una cantidad específica de usuarios de prueba. Puedes utilizar este endpoint para obtener usuarios con datos aleatorios para pruebas en el sistema.
 
 #### Endpoint:
+
 `GET /api/mocks/mockingusers/:q`
 
 **Parámetro:**
+
 - `q`: Número de usuarios a generar. Por defecto, se generan 50 si el parámetro no está especificado.
 
 #### Ejemplo de Solicitud:
+
 ```bash
 GET http://localhost:8080/api/mocks/mockingusers/3
 ```
 
 #### Ejemplo de Respuesta:
+
 ```json
 [
-        {
-            "first_name": "Darrel",
-            "last_name": "Beahan",
-            "email": "Maribel62@yahoo.com",
-            "password": "$2b$10$Q5hhx/7q/.uKMuseI9BFT..iKpKxspy9PkacWoRX5urnro7ji.iEm",
-            "role": "user",
-            "pets": []
-        },
-        {
-            "first_name": "Matt",
-            "last_name": "Corkery",
-            "email": "Casandra.Fadel@yahoo.com",
-            "password": "$2b$10$I7z8QQ0kv8Zy/aoG498UvOxqtresX68k9oYCxTESRcvF6CqOYV8Ka",
-            "role": "user",
-            "pets": []
-        },
-        {
-            "first_name": "Ethyl",
-            "last_name": "Mitchell-Schmeler",
-            "email": "Johnny39@yahoo.com",
-            "password": "$2b$10$TrFV8B5hCwpi5GLw58aDAuKiUi5F4iDEnXSUT/3jIbtwXTjzKnUEG",
-            "role": "user",
-            "pets": []
-        }
-    ]
+  {
+    "first_name": "Darrel",
+    "last_name": "Beahan",
+    "email": "Maribel62@yahoo.com",
+    "password": "$2b$10$Q5hhx/7q/.uKMuseI9BFT..iKpKxspy9PkacWoRX5urnro7ji.iEm",
+    "role": "user",
+    "pets": []
+  },
+  {
+    "first_name": "Matt",
+    "last_name": "Corkery",
+    "email": "Casandra.Fadel@yahoo.com",
+    "password": "$2b$10$I7z8QQ0kv8Zy/aoG498UvOxqtresX68k9oYCxTESRcvF6CqOYV8Ka",
+    "role": "user",
+    "pets": []
+  },
+  {
+    "first_name": "Ethyl",
+    "last_name": "Mitchell-Schmeler",
+    "email": "Johnny39@yahoo.com",
+    "password": "$2b$10$TrFV8B5hCwpi5GLw58aDAuKiUi5F4iDEnXSUT/3jIbtwXTjzKnUEG",
+    "role": "user",
+    "pets": []
+  }
+]
 ```
 
 #### Captura de Test:
-![Segundo Test](image-1.png)
+
+![Segundo Test](src/public/readme/image-1.png)
 
 ---
 
 ### 3. Generación Masiva de Mascotas y Usuarios
 
 #### Descripción:
+
 Este endpoint permite generar tanto mascotas como usuarios de manera masiva en una sola solicitud. Es útil cuando se necesitan grandes cantidades de datos para pruebas o para simular cargas.
 
 #### Endpoint:
+
 `POST api/mocks/generateData`
 
 #### Ejemplo de Solicitud:
+
 ```bash
 GET http://localhost:8080/api/mocks/generateData
 ```
 
 **Cuerpo de la Solicitud:**
+
 ```json
 {
   "petQuantity": 1,
@@ -298,6 +313,7 @@ GET http://localhost:8080/api/mocks/generateData
 ```
 
 #### Ejemplo de Respuesta:
+
 ```json
 "pets": [
         {
@@ -329,7 +345,8 @@ GET http://localhost:8080/api/mocks/generateData
 ```
 
 #### Captura de Test:
-![Tercer Test](image-2.png)
+
+![Tercer Test](src/public/readme/image-2.png)
 
 ---
 
