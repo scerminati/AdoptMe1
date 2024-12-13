@@ -22,7 +22,7 @@ const swaggerOptions = {
       description:
         "Una API CRUD para gestionar usuarios en el proyecto AdoptMe",
     },
-    servers: [{ url: `http://localhost:${PORT}` }],
+    servers: [{ url: `http://localhost:${PORT}/` }],
   },
 
   apis: [`./src/utils/docSwagger.js`],

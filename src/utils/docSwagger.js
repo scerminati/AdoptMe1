@@ -2,6 +2,28 @@
  * @swagger
  * components:
  *   schemas:
+ *     adoptions:
+ *       type: object
+ *       required:
+ *         - owner
+ *         - pet
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: ID de la adopción, string de Mongoose
+ *         owner:
+ *           type: object
+ *           properties:
+ *             _id:
+ *               type: string
+ *               description: ID del dueño (_id de mongoose)
+ *         pet:
+ *           type: object
+ *           properties:
+ *             _id:
+ *               type: string
+ *               description: ID de la mascota (_id de mongoose)
+ *
  *     pets:
  *       type: object
  *       required:
@@ -328,4 +350,70 @@
  *               type: array
  *               items:
  *                 $ref: '#/components/schemas/pets'
+ *
+ *
+ * /api/adoptions:
+ *   get:
+ *     summary: Obtiene todas las adopciones
+ *     tags: [adoptions]
+ *     responses:
+ *       200:
+ *         description: Lista de adopciones
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/adoptions'
+ *
+ * /api/adoptions/{aid}:
+ *   get:
+ *     summary: Obtiene una adopción específica por su ID
+ *     tags: [adoptions]
+ *     parameters:
+ *       - in: path
+ *         name: aid
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID de la adopción
+ *     responses:
+ *       200:
+ *         description: Información de la adopción
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/adoptions'
+ *       404:
+ *         description: Adopción no encontrada
+ *
+ * /api/adoptions/{uid}/{pid}:
+ *   post:
+ *     summary: Crea una nueva adopción
+ *     tags: [adoptions]
+ *     parameters:
+ *       - in: path
+ *         name: uid
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID del usuario (dueño)
+ *       - in: path
+ *         name: pid
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID de la mascota
+ *     responses:
+ *       200:
+ *         description: Adopción creada exitosamente
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/adoptions'
+ *       400:
+ *         description: Mascota adoptada
+ *       404:
+ *         description: Usuario o mascota no encontrados
+ *
  */
