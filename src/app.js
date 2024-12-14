@@ -21,7 +21,7 @@ connectToDatabase();
 configureRoutes();
 
 //Conexión a la base de datos
-async function connectToDatabase() {
+export async function connectToDatabase() {
   try {
     await mongoose.connect(process.env.DATABASE_URL);
     console.log("DataBase Connectado");
@@ -45,4 +45,7 @@ function configureRoutes() {
   app.use("/api/mocks", mocksRouter);
 }
 swagger(app);
+
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+export default app;

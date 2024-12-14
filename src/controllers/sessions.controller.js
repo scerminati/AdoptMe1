@@ -25,7 +25,6 @@ const register = async (req, res) => {
       pets: [],
     };
     let result = await usersService.create(user);
-    console.log(result);
     res.send({ status: "success", payload: result._id });
   } catch (error) {}
 };
