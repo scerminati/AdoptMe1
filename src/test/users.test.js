@@ -163,6 +163,15 @@ describe("Users API, prueba de CRUD", () => {
       const res = await request(app).get(`/api/users/${userId}`);
       expect(res.body.status).to.equal("success");
       expect(res.body.payload).to.have.property("_id", userId);
+      expect(res.body.payload).to.have.property(
+        "first_name",
+        newUser0.first_name
+      );
+      expect(res.body.payload).to.have.property(
+        "last_name",
+        newUser0.last_name
+      );
+      expect(res.body.payload).to.have.property("email", newUser0.email);
     });
 
     it("Debería devolver error al dar un ID equivocado", async () => {

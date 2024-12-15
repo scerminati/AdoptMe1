@@ -39,11 +39,11 @@ describe("Pets API, prueba de CRUD", () => {
       };
       const res = await request(app).post("/api/pets").send(newPet);
 
-      expect(res.body.status).to.equal("success");
       if (res.body.payload) {
         createdPets.push(res.body.payload._id);
       }
 
+      expect(res.body.status).to.equal("success");
       expect(res.body.payload.name).to.equal(newPet.name);
       expect(res.body.payload.specie).to.equal(newPet.specie);
       expect(res.body.payload.birthDate).to.equal(newPet.birthDate);
@@ -104,7 +104,7 @@ describe("Pets API, prueba de CRUD", () => {
         id = res0.body.payload._id;
       }
 
-      const updatedFecha = new Date(); // Nueva fecha actual (distinta de 'fecha')
+      const updatedFecha = new Date(); 
       updatedFecha.setDate(updatedFecha.getDate() - 1);
 
       const petId = id;
