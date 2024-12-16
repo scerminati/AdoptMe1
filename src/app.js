@@ -11,7 +11,9 @@ import mocksRouter from "./routes/mocks.router.js";
 import swagger from "./utils/swagger.js";
 
 import dotenv from "dotenv";
-dotenv.config();
+const env = process.env.NODE_ENV || "dev";
+
+dotenv.config({ path: `.env.${env}` });
 
 const app = express();
 const PORT = process.env.PORT || 8080;

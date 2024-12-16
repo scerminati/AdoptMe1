@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --watch src/app.js",
-    "dev": "nodemon src/app.js",
-    "test": "mocha 'src/test/*.test.js' --timeout 5000 --exit"
+    "start": "cross-env NODE_ENV=prod node src/app.js",
+    "dev": "cross-env NODE_ENV=dev node --watch src/app.js",
+    "test": "cross-env NODE_ENV=test mocha 'src/test/*.test.js' --timeout 5000 --exit"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
     "@faker-js/faker": "^9.2.0",
     "chai": "^5.1.2",
     "commitizen": "^4.3.1",
+    "cross-env": "^7.0.3",
     "mocha": "^10.8.2",
     "supertest": "^7.0.0"
   },
