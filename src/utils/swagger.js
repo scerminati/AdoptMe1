@@ -17,7 +17,7 @@ const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "API de Usuarios",
+      title: "API de AdoptMe",
       version: "1.0.0",
       description:
         "Una API CRUD para gestionar usuarios en el proyecto AdoptMe",
