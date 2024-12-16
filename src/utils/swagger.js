@@ -1,15 +1,10 @@
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import dotenv from "dotenv";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
 
-// Crear __dirname manualmente
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const env = process.env.NODE_ENV || "dev";
 
-dotenv.config();
-
+dotenv.config({ path: `.env.${env}` });
 const PORT = process.env.PORT || 8080;
 
 // Configuración de Swagger

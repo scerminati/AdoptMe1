@@ -2,7 +2,7 @@
 
 Este proyecto es la programación del backend para la aplicación de adopción de mascotas "AdoptMe". Fue realizado como parte del curso **Programación Backend III: Testing y Escalabilidad Backend** de **CODERHOUSE**, comisión 70070, con el profesor Omar Jesús Maniás. La aplicación original ha sido ampliada para incluir funcionalidad de generación de datos ficticios de mascotas y usuarios, testeo y documentación de las rutas API y dockerización de la aplicación.
 
-Se puede encontrar el código original en [este repositorio](https://github.com/CoderContenidos/RecursosBackend-Adoptme) y el código actualizado en el nuevo repositorio: [AdoptMe1](https://github.com/scerminati/AdoptMe1).
+Se puede encontrar el código original en [este repositorio](https://github.com/CoderContenidos/RecursosBackend-Adoptme) y el código actualizado en el nuevo repositorio: [AdoptMe1](https://github.com/scerminati/AdoptMe1). Adicionalmente se puede encontrar la aplicación como imagen en [Docker Hub](https://hub.docker.com/r/scerminati/adoptme2).
 
 ## Tabla de Contenidos
 
@@ -28,6 +28,8 @@ Este proyecto es una implementación del backend para la aplicación "AdoptMe", 
 - **Pruebas y documentación**: Incluye pruebas unitarias y de integración para validar los endpoints y sus respuestas, garantizando el correcto funcionamiento del sistema.
 
 ## Instalación
+
+### Desde GitHub
 
 1. Clonar el repositorio:
 
@@ -62,6 +64,22 @@ Este proyecto es una implementación del backend para la aplicación "AdoptMe", 
 ```bash
    npm test
 ```
+
+### Desde Docker
+
+1. Traer la imagen a Docker Desktop con el siguiente comando:
+
+```bash
+docker pull scerminati/adoptme2
+```
+
+2. Desde la terminal, correr el comando de run:
+
+```bash
+docker run -p 3000:3000 adoptme2
+```
+
+3. Abrir el explorador en la URL `localhost:3000`.
 
 ## Rutas
 
@@ -298,8 +316,6 @@ GET http://localhost:8080/api/mocks/mockingpets/3
 
 ![Primer Test](src/public/readme/image.png)
 
----
-
 #### 2. Generación de Usuarios
 
 ##### Descripción:
@@ -354,8 +370,6 @@ GET http://localhost:8080/api/mocks/mockingusers/3
 ##### Captura de Test:
 
 ![Segundo Test](src/public/readme/image-1.png)
-
----
 
 #### 3. Generación Masiva de Mascotas y Usuarios
 
@@ -418,8 +432,6 @@ GET http://localhost:8080/api/mocks/generateData
 
 ![Tercer Test](src/public/readme/image-2.png)
 
----
-
 #### 4. Generación de Adopciones
 
 ##### Descripción:
@@ -463,8 +475,6 @@ POST http://localhost:8080/api/mocks/generateAdoptions/2
 
 ![Cuarto Test](src/public/readme/image-3.png)
 
----
-
 ### Test
 
 Los test de las APIs de producción se pueden ejecutar mediante el siguiente comando:
@@ -499,6 +509,8 @@ Esta sección de los tests se enfoca en las operaciones CRUD (Crear, Leer, Actua
 - **Pruebas adicionales**:
   - Si el ID no es válido, se espera que se retorne un error 404.
 
+##### Imagen del Test
+
 ![Test Adoptions](src/public/readme/test-adoptions.png)
 
 #### Pets API - Prueba de CRUD
@@ -532,6 +544,8 @@ Esta sección de los tests se enfoca en las operaciones CRUD (Crear, Leer, Actua
 - **Esperado**: La mascota debe ser eliminada correctamente, y la respuesta debe contener el ID de la mascota eliminada.
 - **Pruebas adicionales**:
   - Se verifica que la mascota sea eliminada exitosamente de la base de datos.
+
+##### Imagen del Test
 
 ![Test Pets](src/public/readme/test-pets.png)
 
@@ -574,6 +588,8 @@ Esta sección de los tests se enfoca en las operaciones CRUD (Crear, Leer, Actua
 - **Pruebas adicionales**:
   - Se verifica que el usuario sea eliminado exitosamente de la base de datos.
   - Si el ID no es válido, se espera que se retorne un error 404.
+
+##### Imagen del Test
 
 ![Test Users](src/public/readme/test-users.png)
 
